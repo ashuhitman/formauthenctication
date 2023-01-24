@@ -4,15 +4,15 @@ const bcrypt = require("bcryptjs");
 const { mongoose } = require("mongoose");
 const UserModel = require("./models/User");
 
+require("dotenv").config();
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
 // connect to mongodb database
-const CONNECTION_URL =
-  "mongodb+srv://ashuhitman:ashu123456@cluster0.jiyusnn.mongodb.net/?retryWrites=true&w=majority";
-
+const CONNECTION_URL = process.env.MONGODB_URI;
 app.get("/", (req, res) => {
   res.send("hello world");
 });
@@ -50,7 +50,7 @@ app.post("/register", async (req, res) => {
 
     res.status(200).json({ result: "Registration successful!" });
   } catch (error) {
-    res.status(500).json("Something went wrong...");
+    res.status(500).json({ error: "Something went wrong..." });
   }
 });
 

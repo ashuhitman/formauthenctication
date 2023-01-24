@@ -6,9 +6,10 @@ POST http://localhost:3000/login/
 Content-Type: application/json
 
 {
-    "email": "ashu24533",
+    "email": "ashu8103@gmail.com",
     "password": "1234455"
 }
+
 
 ###
 
@@ -16,6 +17,35 @@ POST http://localhost:3000/register/
 Content-Type: application/json
 
 {
-    "email": "ashu24533",
+    "email": "ashu22@gmail.com",
+    "password": "1234455",
+    "country":"India",
+    "gender": "male",
+    "firstName":"Ashu",
+    "lastName":"Singh",
+    "usernames": "ashu"
+}
+
+
+###
+POST https://ashuhitman-users.onrender.com/login/
+Content-Type: application/json
+
+{
+    "email": "ashu222@gmail.com",
     "password": "1234455"
+}
+
+###
+POST https://ashuhitman-users.onrender.com/register/
+Content-Type: application/json
+
+{
+    "email": "ashu222@gmail.com",
+    "password": "1234455",
+    "country":"India",
+    "gender": "male",
+    "firstName":"Ashu",
+    "lastName":"Singh",
+    "usernames": "ashu"
 }
